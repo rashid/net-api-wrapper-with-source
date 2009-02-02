@@ -1,0 +1,2013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://api.createsend.com/api/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://api.createsend.com/api/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://api.createsend.com/api/">
+      <s:element name="Subscriber.AddWithCustomFields">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfSubscriberCustomField" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSubscriberCustomField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubscriberCustomField" nillable="true" type="tns:SubscriberCustomField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubscriberCustomField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Subscriber.AddWithCustomFieldsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Subscriber.AddWithCustomFieldsResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Subscriber.AddAndResubscribeWithCustomFields">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfSubscriberCustomField" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscriber.AddAndResubscribeWithCustomFieldsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Subscriber.AddAndResubscribeWithCustomFieldsResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscriber.Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscriber.AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Subscriber.AddResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscriber.AddAndResubscribe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscriber.AddAndResubscribeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Subscriber.AddAndResubscribeResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscriber.Unsubscribe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscriber.UnsubscribeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Subscriber.UnsubscribeResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetActive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetActiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Subscribers.GetActiveResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Client">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CampaignSummary">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Recipients" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalOpened" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Clicks" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Unsubscribed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bounced" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubscriberUnsubscribe">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubscriberBounce">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BounceType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubscriberOpen">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfOpens" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubscriberClick">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClickedLinks" type="tns:ArrayOfSubscriberClickedLink" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSubscriberClickedLink">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubscriberClickedLink" nillable="true" type="tns:SubscriberClickedLink" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SubscriberClickedLink">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Link" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Clicks" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="List">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Campaign">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalRecipients" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Subscriber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomFields" type="tns:ArrayOfSubscriberCustomField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSubscriber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Subscriber" nillable="true" type="tns:Subscriber" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCampaign">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Campaign" nillable="true" type="tns:Campaign" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="List" nillable="true" type="tns:List" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSubscriberClick">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubscriberClick" nillable="true" type="tns:SubscriberClick" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSubscriberOpen">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubscriberOpen" nillable="true" type="tns:SubscriberOpen" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSubscriberBounce">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubscriberBounce" nillable="true" type="tns:SubscriberBounce" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSubscriberUnsubscribe">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SubscriberUnsubscribe" nillable="true" type="tns:SubscriberUnsubscribe" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClient">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Client" nillable="true" type="tns:Client" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Subscribers.GetUnsubscribed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetUnsubscribedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Subscribers.GetUnsubscribedResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetBounced">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetBouncedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Subscribers.GetBouncedResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetSingleSubscriber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetSingleSubscriberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Subscribers.GetSingleSubscriberResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetIsSubscribed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subscribers.GetIsSubscribedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Subscribers.GetIsSubscribedResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Client.GetCampaigns">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Client.GetCampaignsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client.GetCampaignsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Client.GetLists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Client.GetListsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client.GetListsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Client.GetSegments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Client.GetSegmentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client.GetSegmentsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetSubscriberClicks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetSubscriberClicksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campaign.GetSubscriberClicksResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetOpens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetOpensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campaign.GetOpensResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetBounces">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetBouncesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campaign.GetBouncesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetUnsubscribes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetUnsubscribesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campaign.GetUnsubscribesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campaign.GetSummaryResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetLists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.GetListsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campaign.GetListsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User.GetClients">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User.GetClientsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User.GetClientsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User.GetSystemDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="User.GetSystemDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User.GetSystemDateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplyTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HtmlUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TextUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubscriberListIDs" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListSegments" type="tns:ArrayOfList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Campaign.CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campaign.CreateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.Send">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmationEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SendDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campaign.SendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Campaign.SendResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Result" type="tns:Result" />
+      <s:element name="anyType" nillable="true" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Subscriber.AddWithCustomFieldsSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscriber.AddWithCustomFields" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddWithCustomFieldsSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscriber.AddWithCustomFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddAndResubscribeWithCustomFieldsSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscriber.AddAndResubscribeWithCustomFields" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddAndResubscribeWithCustomFieldsSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscriber.AddAndResubscribeWithCustomFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscriber.Add" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscriber.AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddAndResubscribeSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscriber.AddAndResubscribe" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddAndResubscribeSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscriber.AddAndResubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.UnsubscribeSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscriber.Unsubscribe" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.UnsubscribeSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscriber.UnsubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetActiveSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetActive" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetActiveSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetUnsubscribedSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetUnsubscribed" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetUnsubscribedSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetUnsubscribedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetBouncedSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetBounced" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetBouncedSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetBouncedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetSingleSubscriberSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetSingleSubscriber" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetSingleSubscriberSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetSingleSubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetIsSubscribedSoapIn">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetIsSubscribed" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetIsSubscribedSoapOut">
+    <wsdl:part name="parameters" element="tns:Subscribers.GetIsSubscribedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetCampaignsSoapIn">
+    <wsdl:part name="parameters" element="tns:Client.GetCampaigns" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetCampaignsSoapOut">
+    <wsdl:part name="parameters" element="tns:Client.GetCampaignsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetListsSoapIn">
+    <wsdl:part name="parameters" element="tns:Client.GetLists" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetListsSoapOut">
+    <wsdl:part name="parameters" element="tns:Client.GetListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetSegmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:Client.GetSegments" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetSegmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:Client.GetSegmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSubscriberClicksSoapIn">
+    <wsdl:part name="parameters" element="tns:Campaign.GetSubscriberClicks" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSubscriberClicksSoapOut">
+    <wsdl:part name="parameters" element="tns:Campaign.GetSubscriberClicksResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetOpensSoapIn">
+    <wsdl:part name="parameters" element="tns:Campaign.GetOpens" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetOpensSoapOut">
+    <wsdl:part name="parameters" element="tns:Campaign.GetOpensResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetBouncesSoapIn">
+    <wsdl:part name="parameters" element="tns:Campaign.GetBounces" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetBouncesSoapOut">
+    <wsdl:part name="parameters" element="tns:Campaign.GetBouncesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetUnsubscribesSoapIn">
+    <wsdl:part name="parameters" element="tns:Campaign.GetUnsubscribes" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetUnsubscribesSoapOut">
+    <wsdl:part name="parameters" element="tns:Campaign.GetUnsubscribesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:Campaign.GetSummary" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:Campaign.GetSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetListsSoapIn">
+    <wsdl:part name="parameters" element="tns:Campaign.GetLists" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetListsSoapOut">
+    <wsdl:part name="parameters" element="tns:Campaign.GetListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="User.GetClientsSoapIn">
+    <wsdl:part name="parameters" element="tns:User.GetClients" />
+  </wsdl:message>
+  <wsdl:message name="User.GetClientsSoapOut">
+    <wsdl:part name="parameters" element="tns:User.GetClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="User.GetSystemDateSoapIn">
+    <wsdl:part name="parameters" element="tns:User.GetSystemDate" />
+  </wsdl:message>
+  <wsdl:message name="User.GetSystemDateSoapOut">
+    <wsdl:part name="parameters" element="tns:User.GetSystemDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:Campaign.Create" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:Campaign.CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.SendSoapIn">
+    <wsdl:part name="parameters" element="tns:Campaign.Send" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.SendSoapOut">
+    <wsdl:part name="parameters" element="tns:Campaign.SendResponse" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddHttpGetOut">
+    <wsdl:part name="Body" element="tns:Result" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddAndResubscribeHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddAndResubscribeHttpGetOut">
+    <wsdl:part name="Body" element="tns:Result" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.UnsubscribeHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.UnsubscribeHttpGetOut">
+    <wsdl:part name="Body" element="tns:Result" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetActiveHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetActiveHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetUnsubscribedHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetUnsubscribedHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetBouncedHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetBouncedHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetSingleSubscriberHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="EmailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetSingleSubscriberHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetIsSubscribedHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetIsSubscribedHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetCampaignsHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ClientID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetCampaignsHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetListsHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ClientID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetListsHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetSegmentsHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ClientID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetSegmentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSubscriberClicksHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSubscriberClicksHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetOpensHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetOpensHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetBouncesHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetBouncesHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetUnsubscribesHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetUnsubscribesHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSummaryHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSummaryHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetListsHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetListsHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="User.GetClientsHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="User.GetClientsHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="User.GetSystemDateHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="User.GetSystemDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.SendHttpGetIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+    <wsdl:part name="ConfirmationEmail" type="s:string" />
+    <wsdl:part name="SendDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.SendHttpGetOut">
+    <wsdl:part name="Body" element="tns:Result" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddHttpPostOut">
+    <wsdl:part name="Body" element="tns:Result" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddAndResubscribeHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.AddAndResubscribeHttpPostOut">
+    <wsdl:part name="Body" element="tns:Result" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.UnsubscribeHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscriber.UnsubscribeHttpPostOut">
+    <wsdl:part name="Body" element="tns:Result" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetActiveHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetActiveHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetUnsubscribedHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetUnsubscribedHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetBouncedHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetBouncedHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetSingleSubscriberHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="EmailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetSingleSubscriberHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetIsSubscribedHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ListID" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Subscribers.GetIsSubscribedHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetCampaignsHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ClientID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetCampaignsHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetListsHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ClientID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetListsHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetSegmentsHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="ClientID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Client.GetSegmentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSubscriberClicksHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSubscriberClicksHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetOpensHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetOpensHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetBouncesHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetBouncesHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetUnsubscribesHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetUnsubscribesHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSummaryHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetSummaryHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetListsHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.GetListsHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="User.GetClientsHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="User.GetClientsHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="User.GetSystemDateHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="User.GetSystemDateHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.SendHttpPostIn">
+    <wsdl:part name="ApiKey" type="s:string" />
+    <wsdl:part name="CampaignID" type="s:string" />
+    <wsdl:part name="ConfirmationEmail" type="s:string" />
+    <wsdl:part name="SendDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Campaign.SendHttpPostOut">
+    <wsdl:part name="Body" element="tns:Result" />
+  </wsdl:message>
+  <wsdl:portType name="apiSoap">
+    <wsdl:operation name="AddSubscriberWithCustomFields">
+      <wsdl:input name="Subscriber.AddWithCustomFields" message="tns:Subscriber.AddWithCustomFieldsSoapIn" />
+      <wsdl:output name="Subscriber.AddWithCustomFields" message="tns:Subscriber.AddWithCustomFieldsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribeWithCustomFields">
+      <wsdl:input name="Subscriber.AddAndResubscribeWithCustomFields" message="tns:Subscriber.AddAndResubscribeWithCustomFieldsSoapIn" />
+      <wsdl:output name="Subscriber.AddAndResubscribeWithCustomFields" message="tns:Subscriber.AddAndResubscribeWithCustomFieldsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubscriber">
+      <wsdl:input name="Subscriber.Add" message="tns:Subscriber.AddSoapIn" />
+      <wsdl:output name="Subscriber.Add" message="tns:Subscriber.AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribe">
+      <wsdl:input name="Subscriber.AddAndResubscribe" message="tns:Subscriber.AddAndResubscribeSoapIn" />
+      <wsdl:output name="Subscriber.AddAndResubscribe" message="tns:Subscriber.AddAndResubscribeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <wsdl:input name="Subscriber.Unsubscribe" message="tns:Subscriber.UnsubscribeSoapIn" />
+      <wsdl:output name="Subscriber.Unsubscribe" message="tns:Subscriber.UnsubscribeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscribers">
+      <wsdl:input name="Subscribers.GetActive" message="tns:Subscribers.GetActiveSoapIn" />
+      <wsdl:output name="Subscribers.GetActive" message="tns:Subscribers.GetActiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnsubscribed">
+      <wsdl:input name="Subscribers.GetUnsubscribed" message="tns:Subscribers.GetUnsubscribedSoapIn" />
+      <wsdl:output name="Subscribers.GetUnsubscribed" message="tns:Subscribers.GetUnsubscribedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBounced">
+      <wsdl:input name="Subscribers.GetBounced" message="tns:Subscribers.GetBouncedSoapIn" />
+      <wsdl:output name="Subscribers.GetBounced" message="tns:Subscribers.GetBouncedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSubscriber">
+      <wsdl:input name="Subscribers.GetSingleSubscriber" message="tns:Subscribers.GetSingleSubscriberSoapIn" />
+      <wsdl:output name="Subscribers.GetSingleSubscriber" message="tns:Subscribers.GetSingleSubscriberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSubscribed">
+      <wsdl:input name="Subscribers.GetIsSubscribed" message="tns:Subscribers.GetIsSubscribedSoapIn" />
+      <wsdl:output name="Subscribers.GetIsSubscribed" message="tns:Subscribers.GetIsSubscribedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCampaigns">
+      <wsdl:input name="Client.GetCampaigns" message="tns:Client.GetCampaignsSoapIn" />
+      <wsdl:output name="Client.GetCampaigns" message="tns:Client.GetCampaignsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientLists">
+      <wsdl:input name="Client.GetLists" message="tns:Client.GetListsSoapIn" />
+      <wsdl:output name="Client.GetLists" message="tns:Client.GetListsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientSegments">
+      <wsdl:input name="Client.GetSegments" message="tns:Client.GetSegmentsSoapIn" />
+      <wsdl:output name="Client.GetSegments" message="tns:Client.GetSegmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberClicks">
+      <wsdl:input name="Campaign.GetSubscriberClicks" message="tns:Campaign.GetSubscriberClicksSoapIn" />
+      <wsdl:output name="Campaign.GetSubscriberClicks" message="tns:Campaign.GetSubscriberClicksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignOpens">
+      <wsdl:input name="Campaign.GetOpens" message="tns:Campaign.GetOpensSoapIn" />
+      <wsdl:output name="Campaign.GetOpens" message="tns:Campaign.GetOpensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignBounces">
+      <wsdl:input name="Campaign.GetBounces" message="tns:Campaign.GetBouncesSoapIn" />
+      <wsdl:output name="Campaign.GetBounces" message="tns:Campaign.GetBouncesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignUnsubscribes">
+      <wsdl:input name="Campaign.GetUnsubscribes" message="tns:Campaign.GetUnsubscribesSoapIn" />
+      <wsdl:output name="Campaign.GetUnsubscribes" message="tns:Campaign.GetUnsubscribesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSummary">
+      <wsdl:input name="Campaign.GetSummary" message="tns:Campaign.GetSummarySoapIn" />
+      <wsdl:output name="Campaign.GetSummary" message="tns:Campaign.GetSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignLists">
+      <wsdl:input name="Campaign.GetLists" message="tns:Campaign.GetListsSoapIn" />
+      <wsdl:output name="Campaign.GetLists" message="tns:Campaign.GetListsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <wsdl:input name="User.GetClients" message="tns:User.GetClientsSoapIn" />
+      <wsdl:output name="User.GetClients" message="tns:User.GetClientsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <wsdl:input name="User.GetSystemDate" message="tns:User.GetSystemDateSoapIn" />
+      <wsdl:output name="User.GetSystemDate" message="tns:User.GetSystemDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCampaign">
+      <wsdl:input name="Campaign.Create" message="tns:Campaign.CreateSoapIn" />
+      <wsdl:output name="Campaign.Create" message="tns:Campaign.CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCampaign">
+      <wsdl:input name="Campaign.Send" message="tns:Campaign.SendSoapIn" />
+      <wsdl:output name="Campaign.Send" message="tns:Campaign.SendSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="apiHttpGet">
+    <wsdl:operation name="AddSubscriber">
+      <wsdl:input name="Subscriber.Add" message="tns:Subscriber.AddHttpGetIn" />
+      <wsdl:output name="Subscriber.Add" message="tns:Subscriber.AddHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribe">
+      <wsdl:input name="Subscriber.AddAndResubscribe" message="tns:Subscriber.AddAndResubscribeHttpGetIn" />
+      <wsdl:output name="Subscriber.AddAndResubscribe" message="tns:Subscriber.AddAndResubscribeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <wsdl:input name="Subscriber.Unsubscribe" message="tns:Subscriber.UnsubscribeHttpGetIn" />
+      <wsdl:output name="Subscriber.Unsubscribe" message="tns:Subscriber.UnsubscribeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscribers">
+      <wsdl:input name="Subscribers.GetActive" message="tns:Subscribers.GetActiveHttpGetIn" />
+      <wsdl:output name="Subscribers.GetActive" message="tns:Subscribers.GetActiveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnsubscribed">
+      <wsdl:input name="Subscribers.GetUnsubscribed" message="tns:Subscribers.GetUnsubscribedHttpGetIn" />
+      <wsdl:output name="Subscribers.GetUnsubscribed" message="tns:Subscribers.GetUnsubscribedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBounced">
+      <wsdl:input name="Subscribers.GetBounced" message="tns:Subscribers.GetBouncedHttpGetIn" />
+      <wsdl:output name="Subscribers.GetBounced" message="tns:Subscribers.GetBouncedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSubscriber">
+      <wsdl:input name="Subscribers.GetSingleSubscriber" message="tns:Subscribers.GetSingleSubscriberHttpGetIn" />
+      <wsdl:output name="Subscribers.GetSingleSubscriber" message="tns:Subscribers.GetSingleSubscriberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSubscribed">
+      <wsdl:input name="Subscribers.GetIsSubscribed" message="tns:Subscribers.GetIsSubscribedHttpGetIn" />
+      <wsdl:output name="Subscribers.GetIsSubscribed" message="tns:Subscribers.GetIsSubscribedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCampaigns">
+      <wsdl:input name="Client.GetCampaigns" message="tns:Client.GetCampaignsHttpGetIn" />
+      <wsdl:output name="Client.GetCampaigns" message="tns:Client.GetCampaignsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientLists">
+      <wsdl:input name="Client.GetLists" message="tns:Client.GetListsHttpGetIn" />
+      <wsdl:output name="Client.GetLists" message="tns:Client.GetListsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientSegments">
+      <wsdl:input name="Client.GetSegments" message="tns:Client.GetSegmentsHttpGetIn" />
+      <wsdl:output name="Client.GetSegments" message="tns:Client.GetSegmentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberClicks">
+      <wsdl:input name="Campaign.GetSubscriberClicks" message="tns:Campaign.GetSubscriberClicksHttpGetIn" />
+      <wsdl:output name="Campaign.GetSubscriberClicks" message="tns:Campaign.GetSubscriberClicksHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignOpens">
+      <wsdl:input name="Campaign.GetOpens" message="tns:Campaign.GetOpensHttpGetIn" />
+      <wsdl:output name="Campaign.GetOpens" message="tns:Campaign.GetOpensHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignBounces">
+      <wsdl:input name="Campaign.GetBounces" message="tns:Campaign.GetBouncesHttpGetIn" />
+      <wsdl:output name="Campaign.GetBounces" message="tns:Campaign.GetBouncesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignUnsubscribes">
+      <wsdl:input name="Campaign.GetUnsubscribes" message="tns:Campaign.GetUnsubscribesHttpGetIn" />
+      <wsdl:output name="Campaign.GetUnsubscribes" message="tns:Campaign.GetUnsubscribesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSummary">
+      <wsdl:input name="Campaign.GetSummary" message="tns:Campaign.GetSummaryHttpGetIn" />
+      <wsdl:output name="Campaign.GetSummary" message="tns:Campaign.GetSummaryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignLists">
+      <wsdl:input name="Campaign.GetLists" message="tns:Campaign.GetListsHttpGetIn" />
+      <wsdl:output name="Campaign.GetLists" message="tns:Campaign.GetListsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <wsdl:input name="User.GetClients" message="tns:User.GetClientsHttpGetIn" />
+      <wsdl:output name="User.GetClients" message="tns:User.GetClientsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <wsdl:input name="User.GetSystemDate" message="tns:User.GetSystemDateHttpGetIn" />
+      <wsdl:output name="User.GetSystemDate" message="tns:User.GetSystemDateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCampaign">
+      <wsdl:input name="Campaign.Send" message="tns:Campaign.SendHttpGetIn" />
+      <wsdl:output name="Campaign.Send" message="tns:Campaign.SendHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="apiHttpPost">
+    <wsdl:operation name="AddSubscriber">
+      <wsdl:input name="Subscriber.Add" message="tns:Subscriber.AddHttpPostIn" />
+      <wsdl:output name="Subscriber.Add" message="tns:Subscriber.AddHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribe">
+      <wsdl:input name="Subscriber.AddAndResubscribe" message="tns:Subscriber.AddAndResubscribeHttpPostIn" />
+      <wsdl:output name="Subscriber.AddAndResubscribe" message="tns:Subscriber.AddAndResubscribeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <wsdl:input name="Subscriber.Unsubscribe" message="tns:Subscriber.UnsubscribeHttpPostIn" />
+      <wsdl:output name="Subscriber.Unsubscribe" message="tns:Subscriber.UnsubscribeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscribers">
+      <wsdl:input name="Subscribers.GetActive" message="tns:Subscribers.GetActiveHttpPostIn" />
+      <wsdl:output name="Subscribers.GetActive" message="tns:Subscribers.GetActiveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnsubscribed">
+      <wsdl:input name="Subscribers.GetUnsubscribed" message="tns:Subscribers.GetUnsubscribedHttpPostIn" />
+      <wsdl:output name="Subscribers.GetUnsubscribed" message="tns:Subscribers.GetUnsubscribedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBounced">
+      <wsdl:input name="Subscribers.GetBounced" message="tns:Subscribers.GetBouncedHttpPostIn" />
+      <wsdl:output name="Subscribers.GetBounced" message="tns:Subscribers.GetBouncedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSubscriber">
+      <wsdl:input name="Subscribers.GetSingleSubscriber" message="tns:Subscribers.GetSingleSubscriberHttpPostIn" />
+      <wsdl:output name="Subscribers.GetSingleSubscriber" message="tns:Subscribers.GetSingleSubscriberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSubscribed">
+      <wsdl:input name="Subscribers.GetIsSubscribed" message="tns:Subscribers.GetIsSubscribedHttpPostIn" />
+      <wsdl:output name="Subscribers.GetIsSubscribed" message="tns:Subscribers.GetIsSubscribedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCampaigns">
+      <wsdl:input name="Client.GetCampaigns" message="tns:Client.GetCampaignsHttpPostIn" />
+      <wsdl:output name="Client.GetCampaigns" message="tns:Client.GetCampaignsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientLists">
+      <wsdl:input name="Client.GetLists" message="tns:Client.GetListsHttpPostIn" />
+      <wsdl:output name="Client.GetLists" message="tns:Client.GetListsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientSegments">
+      <wsdl:input name="Client.GetSegments" message="tns:Client.GetSegmentsHttpPostIn" />
+      <wsdl:output name="Client.GetSegments" message="tns:Client.GetSegmentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberClicks">
+      <wsdl:input name="Campaign.GetSubscriberClicks" message="tns:Campaign.GetSubscriberClicksHttpPostIn" />
+      <wsdl:output name="Campaign.GetSubscriberClicks" message="tns:Campaign.GetSubscriberClicksHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignOpens">
+      <wsdl:input name="Campaign.GetOpens" message="tns:Campaign.GetOpensHttpPostIn" />
+      <wsdl:output name="Campaign.GetOpens" message="tns:Campaign.GetOpensHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignBounces">
+      <wsdl:input name="Campaign.GetBounces" message="tns:Campaign.GetBouncesHttpPostIn" />
+      <wsdl:output name="Campaign.GetBounces" message="tns:Campaign.GetBouncesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignUnsubscribes">
+      <wsdl:input name="Campaign.GetUnsubscribes" message="tns:Campaign.GetUnsubscribesHttpPostIn" />
+      <wsdl:output name="Campaign.GetUnsubscribes" message="tns:Campaign.GetUnsubscribesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSummary">
+      <wsdl:input name="Campaign.GetSummary" message="tns:Campaign.GetSummaryHttpPostIn" />
+      <wsdl:output name="Campaign.GetSummary" message="tns:Campaign.GetSummaryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignLists">
+      <wsdl:input name="Campaign.GetLists" message="tns:Campaign.GetListsHttpPostIn" />
+      <wsdl:output name="Campaign.GetLists" message="tns:Campaign.GetListsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <wsdl:input name="User.GetClients" message="tns:User.GetClientsHttpPostIn" />
+      <wsdl:output name="User.GetClients" message="tns:User.GetClientsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <wsdl:input name="User.GetSystemDate" message="tns:User.GetSystemDateHttpPostIn" />
+      <wsdl:output name="User.GetSystemDate" message="tns:User.GetSystemDateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCampaign">
+      <wsdl:input name="Campaign.Send" message="tns:Campaign.SendHttpPostIn" />
+      <wsdl:output name="Campaign.Send" message="tns:Campaign.SendHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="apiSoap" type="tns:apiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddSubscriberWithCustomFields">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscriber.AddWithCustomFields" style="document" />
+      <wsdl:input name="Subscriber.AddWithCustomFields">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.AddWithCustomFields">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribeWithCustomFields">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscriber.AddAndResubscribeWithCustomFields" style="document" />
+      <wsdl:input name="Subscriber.AddAndResubscribeWithCustomFields">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.AddAndResubscribeWithCustomFields">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubscriber">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscriber.Add" style="document" />
+      <wsdl:input name="Subscriber.Add">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.Add">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribe">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscriber.AddAndResubscribe" style="document" />
+      <wsdl:input name="Subscriber.AddAndResubscribe">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.AddAndResubscribe">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscriber.Unsubscribe" style="document" />
+      <wsdl:input name="Subscriber.Unsubscribe">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.Unsubscribe">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscribers">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscribers.GetActive" style="document" />
+      <wsdl:input name="Subscribers.GetActive">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetActive">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnsubscribed">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscribers.GetUnsubscribed" style="document" />
+      <wsdl:input name="Subscribers.GetUnsubscribed">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetUnsubscribed">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBounced">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscribers.GetBounced" style="document" />
+      <wsdl:input name="Subscribers.GetBounced">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetBounced">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSubscriber">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscribers.GetSingleSubscriber" style="document" />
+      <wsdl:input name="Subscribers.GetSingleSubscriber">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetSingleSubscriber">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSubscribed">
+      <soap:operation soapAction="http://api.createsend.com/api/Subscribers.GetIsSubscribed" style="document" />
+      <wsdl:input name="Subscribers.GetIsSubscribed">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetIsSubscribed">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCampaigns">
+      <soap:operation soapAction="http://api.createsend.com/api/Client.GetCampaigns" style="document" />
+      <wsdl:input name="Client.GetCampaigns">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetCampaigns">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientLists">
+      <soap:operation soapAction="http://api.createsend.com/api/Client.GetLists" style="document" />
+      <wsdl:input name="Client.GetLists">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetLists">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientSegments">
+      <soap:operation soapAction="http://api.createsend.com/api/Client.GetSegments" style="document" />
+      <wsdl:input name="Client.GetSegments">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetSegments">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberClicks">
+      <soap:operation soapAction="http://api.createsend.com/api/Campaign.GetSubscriberClicks" style="document" />
+      <wsdl:input name="Campaign.GetSubscriberClicks">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetSubscriberClicks">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignOpens">
+      <soap:operation soapAction="http://api.createsend.com/api/Campaign.GetOpens" style="document" />
+      <wsdl:input name="Campaign.GetOpens">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetOpens">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignBounces">
+      <soap:operation soapAction="http://api.createsend.com/api/Campaign.GetBounces" style="document" />
+      <wsdl:input name="Campaign.GetBounces">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetBounces">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignUnsubscribes">
+      <soap:operation soapAction="http://api.createsend.com/api/Campaign.GetUnsubscribes" style="document" />
+      <wsdl:input name="Campaign.GetUnsubscribes">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetUnsubscribes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSummary">
+      <soap:operation soapAction="http://api.createsend.com/api/Campaign.GetSummary" style="document" />
+      <wsdl:input name="Campaign.GetSummary">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetSummary">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignLists">
+      <soap:operation soapAction="http://api.createsend.com/api/Campaign.GetLists" style="document" />
+      <wsdl:input name="Campaign.GetLists">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetLists">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <soap:operation soapAction="http://api.createsend.com/api/User.GetClients" style="document" />
+      <wsdl:input name="User.GetClients">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="User.GetClients">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <soap:operation soapAction="http://api.createsend.com/api/User.GetSystemDate" style="document" />
+      <wsdl:input name="User.GetSystemDate">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="User.GetSystemDate">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCampaign">
+      <soap:operation soapAction="http://api.createsend.com/api/Campaign.Create" style="document" />
+      <wsdl:input name="Campaign.Create">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.Create">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCampaign">
+      <soap:operation soapAction="http://api.createsend.com/api/Campaign.Send" style="document" />
+      <wsdl:input name="Campaign.Send">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.Send">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="apiSoap12" type="tns:apiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddSubscriberWithCustomFields">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscriber.AddWithCustomFields" style="document" />
+      <wsdl:input name="Subscriber.AddWithCustomFields">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.AddWithCustomFields">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribeWithCustomFields">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscriber.AddAndResubscribeWithCustomFields" style="document" />
+      <wsdl:input name="Subscriber.AddAndResubscribeWithCustomFields">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.AddAndResubscribeWithCustomFields">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubscriber">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscriber.Add" style="document" />
+      <wsdl:input name="Subscriber.Add">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.Add">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribe">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscriber.AddAndResubscribe" style="document" />
+      <wsdl:input name="Subscriber.AddAndResubscribe">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.AddAndResubscribe">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscriber.Unsubscribe" style="document" />
+      <wsdl:input name="Subscriber.Unsubscribe">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.Unsubscribe">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscribers">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscribers.GetActive" style="document" />
+      <wsdl:input name="Subscribers.GetActive">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetActive">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnsubscribed">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscribers.GetUnsubscribed" style="document" />
+      <wsdl:input name="Subscribers.GetUnsubscribed">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetUnsubscribed">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBounced">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscribers.GetBounced" style="document" />
+      <wsdl:input name="Subscribers.GetBounced">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetBounced">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSubscriber">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscribers.GetSingleSubscriber" style="document" />
+      <wsdl:input name="Subscribers.GetSingleSubscriber">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetSingleSubscriber">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSubscribed">
+      <soap12:operation soapAction="http://api.createsend.com/api/Subscribers.GetIsSubscribed" style="document" />
+      <wsdl:input name="Subscribers.GetIsSubscribed">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetIsSubscribed">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCampaigns">
+      <soap12:operation soapAction="http://api.createsend.com/api/Client.GetCampaigns" style="document" />
+      <wsdl:input name="Client.GetCampaigns">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetCampaigns">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientLists">
+      <soap12:operation soapAction="http://api.createsend.com/api/Client.GetLists" style="document" />
+      <wsdl:input name="Client.GetLists">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetLists">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientSegments">
+      <soap12:operation soapAction="http://api.createsend.com/api/Client.GetSegments" style="document" />
+      <wsdl:input name="Client.GetSegments">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetSegments">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberClicks">
+      <soap12:operation soapAction="http://api.createsend.com/api/Campaign.GetSubscriberClicks" style="document" />
+      <wsdl:input name="Campaign.GetSubscriberClicks">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetSubscriberClicks">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignOpens">
+      <soap12:operation soapAction="http://api.createsend.com/api/Campaign.GetOpens" style="document" />
+      <wsdl:input name="Campaign.GetOpens">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetOpens">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignBounces">
+      <soap12:operation soapAction="http://api.createsend.com/api/Campaign.GetBounces" style="document" />
+      <wsdl:input name="Campaign.GetBounces">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetBounces">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignUnsubscribes">
+      <soap12:operation soapAction="http://api.createsend.com/api/Campaign.GetUnsubscribes" style="document" />
+      <wsdl:input name="Campaign.GetUnsubscribes">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetUnsubscribes">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSummary">
+      <soap12:operation soapAction="http://api.createsend.com/api/Campaign.GetSummary" style="document" />
+      <wsdl:input name="Campaign.GetSummary">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetSummary">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignLists">
+      <soap12:operation soapAction="http://api.createsend.com/api/Campaign.GetLists" style="document" />
+      <wsdl:input name="Campaign.GetLists">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetLists">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <soap12:operation soapAction="http://api.createsend.com/api/User.GetClients" style="document" />
+      <wsdl:input name="User.GetClients">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="User.GetClients">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <soap12:operation soapAction="http://api.createsend.com/api/User.GetSystemDate" style="document" />
+      <wsdl:input name="User.GetSystemDate">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="User.GetSystemDate">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCampaign">
+      <soap12:operation soapAction="http://api.createsend.com/api/Campaign.Create" style="document" />
+      <wsdl:input name="Campaign.Create">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.Create">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCampaign">
+      <soap12:operation soapAction="http://api.createsend.com/api/Campaign.Send" style="document" />
+      <wsdl:input name="Campaign.Send">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.Send">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="apiHttpGet" type="tns:apiHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="AddSubscriber">
+      <http:operation location="/Subscriber.Add" />
+      <wsdl:input name="Subscriber.Add">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.Add">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribe">
+      <http:operation location="/Subscriber.AddAndResubscribe" />
+      <wsdl:input name="Subscriber.AddAndResubscribe">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.AddAndResubscribe">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <http:operation location="/Subscriber.Unsubscribe" />
+      <wsdl:input name="Subscriber.Unsubscribe">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.Unsubscribe">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscribers">
+      <http:operation location="/Subscribers.GetActive" />
+      <wsdl:input name="Subscribers.GetActive">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetActive">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnsubscribed">
+      <http:operation location="/Subscribers.GetUnsubscribed" />
+      <wsdl:input name="Subscribers.GetUnsubscribed">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetUnsubscribed">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBounced">
+      <http:operation location="/Subscribers.GetBounced" />
+      <wsdl:input name="Subscribers.GetBounced">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetBounced">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSubscriber">
+      <http:operation location="/Subscribers.GetSingleSubscriber" />
+      <wsdl:input name="Subscribers.GetSingleSubscriber">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetSingleSubscriber">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSubscribed">
+      <http:operation location="/Subscribers.GetIsSubscribed" />
+      <wsdl:input name="Subscribers.GetIsSubscribed">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetIsSubscribed">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCampaigns">
+      <http:operation location="/Client.GetCampaigns" />
+      <wsdl:input name="Client.GetCampaigns">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Client.GetCampaigns">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientLists">
+      <http:operation location="/Client.GetLists" />
+      <wsdl:input name="Client.GetLists">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Client.GetLists">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientSegments">
+      <http:operation location="/Client.GetSegments" />
+      <wsdl:input name="Client.GetSegments">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Client.GetSegments">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberClicks">
+      <http:operation location="/Campaign.GetSubscriberClicks" />
+      <wsdl:input name="Campaign.GetSubscriberClicks">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetSubscriberClicks">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignOpens">
+      <http:operation location="/Campaign.GetOpens" />
+      <wsdl:input name="Campaign.GetOpens">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetOpens">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignBounces">
+      <http:operation location="/Campaign.GetBounces" />
+      <wsdl:input name="Campaign.GetBounces">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetBounces">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignUnsubscribes">
+      <http:operation location="/Campaign.GetUnsubscribes" />
+      <wsdl:input name="Campaign.GetUnsubscribes">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetUnsubscribes">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSummary">
+      <http:operation location="/Campaign.GetSummary" />
+      <wsdl:input name="Campaign.GetSummary">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetSummary">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignLists">
+      <http:operation location="/Campaign.GetLists" />
+      <wsdl:input name="Campaign.GetLists">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetLists">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <http:operation location="/User.GetClients" />
+      <wsdl:input name="User.GetClients">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="User.GetClients">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <http:operation location="/User.GetSystemDate" />
+      <wsdl:input name="User.GetSystemDate">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="User.GetSystemDate">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCampaign">
+      <http:operation location="/Campaign.Send" />
+      <wsdl:input name="Campaign.Send">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="Campaign.Send">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="apiHttpPost" type="tns:apiHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="AddSubscriber">
+      <http:operation location="/Subscriber.Add" />
+      <wsdl:input name="Subscriber.Add">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.Add">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAndResubscribe">
+      <http:operation location="/Subscriber.AddAndResubscribe" />
+      <wsdl:input name="Subscriber.AddAndResubscribe">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.AddAndResubscribe">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <http:operation location="/Subscriber.Unsubscribe" />
+      <wsdl:input name="Subscriber.Unsubscribe">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Subscriber.Unsubscribe">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscribers">
+      <http:operation location="/Subscribers.GetActive" />
+      <wsdl:input name="Subscribers.GetActive">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetActive">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnsubscribed">
+      <http:operation location="/Subscribers.GetUnsubscribed" />
+      <wsdl:input name="Subscribers.GetUnsubscribed">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetUnsubscribed">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBounced">
+      <http:operation location="/Subscribers.GetBounced" />
+      <wsdl:input name="Subscribers.GetBounced">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetBounced">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSubscriber">
+      <http:operation location="/Subscribers.GetSingleSubscriber" />
+      <wsdl:input name="Subscribers.GetSingleSubscriber">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetSingleSubscriber">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSubscribed">
+      <http:operation location="/Subscribers.GetIsSubscribed" />
+      <wsdl:input name="Subscribers.GetIsSubscribed">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Subscribers.GetIsSubscribed">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientCampaigns">
+      <http:operation location="/Client.GetCampaigns" />
+      <wsdl:input name="Client.GetCampaigns">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetCampaigns">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientLists">
+      <http:operation location="/Client.GetLists" />
+      <wsdl:input name="Client.GetLists">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetLists">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientSegments">
+      <http:operation location="/Client.GetSegments" />
+      <wsdl:input name="Client.GetSegments">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Client.GetSegments">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberClicks">
+      <http:operation location="/Campaign.GetSubscriberClicks" />
+      <wsdl:input name="Campaign.GetSubscriberClicks">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetSubscriberClicks">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignOpens">
+      <http:operation location="/Campaign.GetOpens" />
+      <wsdl:input name="Campaign.GetOpens">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetOpens">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignBounces">
+      <http:operation location="/Campaign.GetBounces" />
+      <wsdl:input name="Campaign.GetBounces">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetBounces">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignUnsubscribes">
+      <http:operation location="/Campaign.GetUnsubscribes" />
+      <wsdl:input name="Campaign.GetUnsubscribes">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetUnsubscribes">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSummary">
+      <http:operation location="/Campaign.GetSummary" />
+      <wsdl:input name="Campaign.GetSummary">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetSummary">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignLists">
+      <http:operation location="/Campaign.GetLists" />
+      <wsdl:input name="Campaign.GetLists">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.GetLists">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <http:operation location="/User.GetClients" />
+      <wsdl:input name="User.GetClients">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="User.GetClients">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <http:operation location="/User.GetSystemDate" />
+      <wsdl:input name="User.GetSystemDate">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="User.GetSystemDate">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCampaign">
+      <http:operation location="/Campaign.Send" />
+      <wsdl:input name="Campaign.Send">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="Campaign.Send">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="api">
+    <wsdl:port name="apiSoap" binding="tns:apiSoap">
+      <soap:address location="http://api.createsend.com/api/api.asmx" />
+    </wsdl:port>
+    <wsdl:port name="apiSoap12" binding="tns:apiSoap12">
+      <soap12:address location="http://api.createsend.com/api/api.asmx" />
+    </wsdl:port>
+    <wsdl:port name="apiHttpGet" binding="tns:apiHttpGet">
+      <http:address location="http://api.createsend.com/api/api.asmx" />
+    </wsdl:port>
+    <wsdl:port name="apiHttpPost" binding="tns:apiHttpPost">
+      <http:address location="http://api.createsend.com/api/api.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

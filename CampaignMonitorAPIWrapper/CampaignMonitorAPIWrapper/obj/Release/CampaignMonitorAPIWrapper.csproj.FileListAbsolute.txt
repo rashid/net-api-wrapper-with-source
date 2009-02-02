@@ -1,0 +1,7 @@
+C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\bin\Release\CampaignMonitorAPIWrapper.dll
+C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\bin\Release\CampaignMonitorAPIWrapper.XmlSerializers.dll
+C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\bin\Release\CampaignMonitorAPIWrapper.pdb
+C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\obj\Release\ResolveAssemblyReference.cache
+C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\obj\Release\CampaignMonitorAPIWrapper.dll
+C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\obj\Release\CampaignMonitorAPIWrapper.pdb
+C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\obj\Release\CampaignMonitorAPIWrapper.XmlSerializers.dll
