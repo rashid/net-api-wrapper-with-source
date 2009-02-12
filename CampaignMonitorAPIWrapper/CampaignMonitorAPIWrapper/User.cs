@@ -29,5 +29,29 @@ namespace CampaignMonitorAPIWrapper
             else
                 return new Result<DateTime>(0, "Success", Convert.ToDateTime(o));
         }
+
+        public static Result<List<string>> GetTimeZones(string apiKey)
+        {
+            CampaignMonitorAPIWrapper.CampaignMonitorAPI.api _api = new CampaignMonitorAPI.api();
+
+            object o = _api.GetTimezones(apiKey);
+
+            if (o is CampaignMonitorAPI.Result)
+                return new Result<List<string>>((CampaignMonitorAPI.Result)o, null);
+            else
+                return new Result<List<string>>(0, "Success", new List<string>((IEnumerable<string>)o));
+        }
+
+        public static Result<List<string>> GetCountries(string apiKey)
+        {
+            CampaignMonitorAPIWrapper.CampaignMonitorAPI.api _api = new CampaignMonitorAPI.api();
+
+            object o = _api.GetCountries(apiKey);
+
+            if (o is CampaignMonitorAPI.Result)
+                return new Result<List<string>>((CampaignMonitorAPI.Result)o, null);
+            else
+                return new Result<List<string>>(0, "Success", new List<string>((IEnumerable<string>)o));
+        }
     }
 }

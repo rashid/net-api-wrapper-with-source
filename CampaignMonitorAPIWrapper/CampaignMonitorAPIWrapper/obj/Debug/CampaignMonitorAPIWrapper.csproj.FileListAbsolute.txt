@@ -1,5 +1,10 @@
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\bin\Debug\CampaignMonitorAPIWrapper.dll
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\bin\Debug\CampaignMonitorAPIWrapper.pdb
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\obj\Debug\CampaignMonitorAPIWrapper.dll
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPI\CampaignMonitorAPI\obj\Debug\CampaignMonitorAPIWrapper.pdb
+C:\Projects\CampaignMonitor\merged\extras\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\CampaignMonitor\merged\extras\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\bin\Debug\CampaignMonitorAPIWrapper.dll
+C:\Projects\CampaignMonitor\merged\extras\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\bin\Debug\CampaignMonitorAPIWrapper.pdb
+C:\Projects\CampaignMonitor\merged\extras\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\obj\Debug\CampaignMonitorAPIWrapper.dll
+C:\Projects\CampaignMonitor\merged\extras\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\obj\Debug\CampaignMonitorAPIWrapper.pdb
+C:\Users\philg.FRESHVIEW\Desktop\campaignmonitor-net-api-wrapper-with-source\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\bin\Debug\CampaignMonitorAPIWrapper.dll
+C:\Users\philg.FRESHVIEW\Desktop\campaignmonitor-net-api-wrapper-with-source\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\bin\Debug\CampaignMonitorAPIWrapper.pdb
+C:\Users\philg.FRESHVIEW\Desktop\campaignmonitor-net-api-wrapper-with-source\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\philg.FRESHVIEW\Desktop\campaignmonitor-net-api-wrapper-with-source\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\obj\Debug\CampaignMonitorAPIWrapper.dll
+C:\Users\philg.FRESHVIEW\Desktop\campaignmonitor-net-api-wrapper-with-source\CampaignMonitorAPIWrapper\CampaignMonitorAPIWrapper\obj\Debug\CampaignMonitorAPIWrapper.pdb
