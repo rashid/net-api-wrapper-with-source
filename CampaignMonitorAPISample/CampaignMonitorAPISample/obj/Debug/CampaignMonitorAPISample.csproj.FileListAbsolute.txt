@@ -1,6 +1,0 @@
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPISample\CampaignMonitorAPISample\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPISample\CampaignMonitorAPISample\bin\Debug\CampaignMonitorAPISample.exe
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPISample\CampaignMonitorAPISample\bin\Debug\CampaignMonitorAPISample.pdb
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPISample\CampaignMonitorAPISample\obj\Debug\CampaignMonitorAPISample.exe
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPISample\CampaignMonitorAPISample\obj\Debug\CampaignMonitorAPISample.pdb
-C:\Users\jasonh\Documents\Visual Studio 2008\Projects\CampaignMonitorAPISample\CampaignMonitorAPISample\bin\Debug\CampaignMonitorAPIWrapper.dll
